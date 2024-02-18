@@ -89,17 +89,23 @@
             flex-basis: 50%;
         }
         .app-infoAlt h2, .app-infoAlt p, .app-infoAlt a {
-          justify-content: flex-start;
+            justify-content: flex-start;
             margin: 5px 0;
         }
         .app-infoAlt a {
             color: #007bff;
             text-decoration: none;
         }
-        .alt {
-            
+        .nonalt {
+
         }
-      
+        .alt {
+           display: block; 
+        }
+        .alttall {
+           display: none;
+        }
+
         .app-image {
             max-width: 50%;
             min-width: 400px;
@@ -184,6 +190,50 @@
         
         cursor: default !important;
       }
+      
+@media only screen and (max-width: 600px) {
+    /* Media query for narrow and tall windows */
+    .app-container {
+        flex-direction: column;
+    }
+    .app-container .left,
+    .app-container .leftAlt,
+    .app-container .right,
+    .app-container .rightAlt {
+        margin: 0;
+        width: 100%;
+    }
+    .app-image,
+    .app-imageAlt {
+        min-width: unset;
+        max-width: unset;
+        width: 100%;
+        align-self: center;
+    }
+    .app-info,
+    .app-infoAlt {
+        text-align: left; /* Center align text */
+        margin: 20px 0;
+    }
+  
+    .app-info h2, .app-info p, .app-info a {
+        margin: 10px 0;
+    }
+  
+    .nonalt {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .alt {
+        display: none;
+    }
+    .alttall {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        display: block;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -205,9 +255,13 @@
             </div>
           <div class="right">
             <div class="right app-info">
+              
+              <div class="nonalt">
                 <h2>SnapLingo — iOS</h2>
                 <p>Classify and Translate live images. Create flashcards and play quizzes.</p>
               <button class="blue-btn" onclick="window.location.href='https://apps.apple.com/au/app/snaplingo/id6477288904'">App Store</button>
+              
+              </div>
             </div>
           </div>
           
@@ -230,7 +284,16 @@
           
             <div class="right">
               <img src="paleomapvisPre.png" alt="App 2" class="app-imageAlt">
+              
+              <div class="right app-info">
+                <div class="alttall">
+                <h2>PaleoMap Vision — VisionPro</h2>
+                <p>Explore over 170,000 paleobiology data entries on a live responsive map.</p>
+                <button class="blue-btn" onclick="window.location.href='https://apps.apple.com/au/app/paleomap-vision/id6476072118'">App Store</button>
+                </div>
+              </div>
             </div>
+          
         </div>
     </div>
 
@@ -241,9 +304,13 @@
             </div>
           <div class="right">
             <div class="right app-info">
+              
+              <div class="nonalt">
                 <h2>Rewordee — Safari Extension for Youtube</h2>
                 <p>Summarize, Query, Translate &amp; Commentate Youtube videos with AI.</p>
               <button class="blue-btn" onclick="window.location.href='https://apps.apple.com/au/app/rewordee-ai-chat-for-youtube/id6450869926?mt=12'">Mac App Store</button>
+              </div>
+              
             </div>
           </div>
         </div>
