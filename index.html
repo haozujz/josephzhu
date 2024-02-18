@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iOS Developer Portfolio</title>
+    <style>
+        :root {
+            --ok-blue: #007AFF;
+        }
+      
+        body {
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF;
+            color: #333;
+        }
+        .row {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        .row:nth-child(even) {
+            background-color: #FAFAFA;
+        }
+        .developer-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .developer-info h1 {
+            margin: 0;
+        }
+        .social-icons {
+            margin-left: auto;
+        }
+        .social-icons img {
+            width: 30px;
+            margin-left: 10px;
+        }
+        .app-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        .app-container .left,
+        .app-container .right {
+            margin-left: 20px;
+            flex-basis: 50%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column; /* Arrange text vertically */
+        }
+        .app-container .left {
+            margin-right: 20px;
+            justify-content: flex-end; /* Align image to the right */
+        }
+        .app-container .leftAlt,
+        .app-container .rightAlt {
+            flex-basis: 50%;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column; /* Arrange text vertically */
+        }
+      
+        .app-container .leftAlt {
+            margin-right: 20px;
+            justify-content: flex-end; /* Align image to the right */
+        }
+      
+        .app-info {
+            margin-left: 20px;
+            flex-basis: 50%;
+        }
+        .app-info h2, .app-info p, .app-info a {
+            margin: 5px 0;
+        }
+        .app-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+      
+        .app-infoAlt {
+            justify-content: flex-end;
+            margin-right: 20px;
+            flex-basis: 50%;
+        }
+        .app-infoAlt h2, .app-infoAlt p, .app-infoAlt a {
+          justify-content: flex-start;
+            margin: 5px 0;
+        }
+        .app-infoAlt a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .alt {
+            
+        }
+      
+        .app-image {
+            max-width: 50%;
+            min-width: 400px;
+            height: auto;
+            align-self: flex-end; /* Align image to the right */
+        }
+        .app-imageAlt {
+            max-width: 50%;
+            min-width: 400px;
+            height: auto;
+            align-self: flex-start; /* Align image to the right */
+        }
+      
+      .blue-btn {
+        background-color: var(--ok-blue);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        
+        margin-top: 8px;
+        font-size: 16px; /* Enlarge font size */
+        
+        transition: transform 0.3s ease; /* Add transition for smooth effect */
+        cursor: pointer;
+      }
+      .blue-btn.large-margin {
+        margin-left: 478px;
+      }
+
+      .blue-btn:hover {
+        background-color: #0056b3;
+        
+        transform: scale(1.1); /* Increase size on hover */
+      }
+
+      .blue-btn:active {
+        background-color: #004999;
+      }
+
+      .blue-btn:after {
+        content: "";
+        background: white;
+        display: block;
+        position: absolute;
+        padding-top: 300%;
+        padding-left: 350%;
+        margin-left: -20px !important;
+        margin-top: -150%;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.8s;
+      }
+
+      .blue-btn:active:after {
+        padding: 0;
+        margin: 0;
+        opacity: 1;
+        transition: 0s;
+      }
+      
+      .social-icons a img {
+        width: 30px;
+        margin-left: 10px;
+        transition: transform 0.3s ease; /* Add transition for smooth effect */
+        cursor: pointer;
+      }
+
+      .social-icons a img:hover {
+        transform: scale(1.2); /* Increase size on hover */
+      }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="developer-info">
+            <h1>Joseph Zhu</h1>
+              <div class="social-icons">
+                  <a href="https://www.linkedin.com/in/joseph-zhu-jz"><img src="linkedinIcon.svg" alt="LinkedIn"></a>
+                  <a href="https://github.com/haozujz"><img src="githubIcon.svg" alt="GitHub"></a>
+                  <a href="mailto:haozu.jz@gmail.com"><img src="mailIcon.svg" alt="Email"></a>
+              </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="app-container">
+            <div class="left">
+                <img src="snaplingoPre.png" alt="App 1" class="app-image">
+            </div>
+          <div class="right">
+            <div class="right app-info">
+                <h2>SnapLingo — iOS</h2>
+                <p>Classify and Translate live Images. Create flashcards and play quizzes.</p>
+              <button class="blue-btn" onclick="window.location.href='https://apps.apple.com/au/app/snaplingo/id6477288904'">App Store</button>
+            </div>
+          </div>
+          
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="app-container">
+          <div class="leftAlt">
+            <div class="leftAlt app-infoAlt">
+              
+              <div class="alt">
+                <h2>PaleoMap Vision — VisionPro</h2>
+                <p>Explore over 170,000 paleobiology data entries on a live responsive map.</p>
+                <button class="blue-btn" onclick="window.location.href='https://apps.apple.com/au/app/paleomap-vision/id6476072118'">App Store</button>
+              </div>
+              
+            </div>
+          </div>
+          
+            <div class="right">
+              <img src="paleomapvisPre.png" alt="App 2" class="app-imageAlt">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="app-container">
+            <div class="left">
+                <img src="rewordeePre.png" alt="App 3" class="app-image">
+            </div>
+          <div class="right">
+            <div class="right app-info">
+                <h2>Rewordee — Safari Extension for Youtube</h2>
+                <p>Summarize, Query, Translate &amp; Commentate Youtube videos with AI.</p>
+              <button class="blue-btn" onclick="window.location.href='https://apps.apple.com/au/app/rewordee-ai-chat-for-youtube/id6450869926?mt=12'">Mac App Store</button>
+            </div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>
